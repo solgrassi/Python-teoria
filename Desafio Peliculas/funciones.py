@@ -33,3 +33,11 @@ def max_average (movies_duration,average):
     maax = [n for n in movies_duration if n > average]
     print(f"{len(maax)} películas duran más que el promedio ({average} min).")
 
+if (__name__ == "__main__"):
+    # Invoco la función para cargar la duración de las películas
+    movies = []
+    movies = input_movies()
+    # Invoco la función para calcular el promedio
+    average = average_calculation(movies)
+    # Invoco la función para informar las que superan el promedio
+    max_average(movies,average)
